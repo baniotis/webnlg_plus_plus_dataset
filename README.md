@@ -164,7 +164,7 @@ When using it, please cite:
 
 ## Acknowledgments
 
-This dataset builds upon the **WebNLG⁺** benchmark and integrates updates from the **DBpedia** ontology and entity set.
+???This dataset builds upon the **WebNLG⁺** benchmark and integrates updates from the **DBpedia** ontology and entity set.
 We thank the WebNLG organizers and DBpedia maintainers for their foundational contributions.
 
 ---
