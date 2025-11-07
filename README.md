@@ -172,4 +172,4 @@ We thank the WebNLG organizers and DBpedia maintainers for their foundational co
 ## Contact
 
 For questions, comments, or contributions:
-**[your.email@example.com](mailto:baniotis@ics.forth.gr)**
+**[baniotis@ics.forth.gr](mailto:baniotis@ics.forth.gr)**
