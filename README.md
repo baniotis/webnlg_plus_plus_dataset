@@ -1,86 +1,79 @@
-# 🧩 WebNLG⁺⁺ (`webnlg_improved`)
+# WebNLG⁺⁺
 
 ## Overview
 
-**WebNLG⁺ Improved (WebNLG⁺ᴵ)** is a harmonized, timely, and internally consistent version of the **WebNLG⁺ test set**.
-It was developed to reflect ontology and entity changes in the latest version of **DBpedia**, thereby improving alignment between benchmark data and the **current world knowledge** embedded in large language models (LLMs).
+**WebNLG⁺⁺** is a harmonized, timely, and internally consistent version of the **WebNLG⁺ test set**.
+It was developed to reflect ontology and entity changes in the latest version of **DBpedia**, thereby improving alignment between benchmark data and the current world knowledge embedded in large language models (LLMs).
 
 This dataset enables researchers to evaluate LLMs and triple extraction systems under realistic, temporally aware, and ontology-evolving conditions.
 
 ---
 
-## ✳️ Motivation
+## Motivation
 
 Over time, DBpedia entities, predicates, and URIs evolve — new ones are added, old ones are renamed, and factual relations may change.
 Such changes affect benchmarks like WebNLG⁺, which rely on static knowledge snapshots.
 
-To address this, WebNLG⁺ Improved incorporates updates to ensure:
+To address this, WebNLG⁺⁺ incorporates updates to ensure:
 
-* **Consistency** with current DBpedia URIs and ontology.
-* **Relevance** for evaluating modern LLMs.
-* **Traceability** of all changes made to triples.
+* Consistency with current DBpedia URIs and ontology.
+* Relevance for evaluating modern LLMs.
+* Traceability of all changes made to triples.
 
 ---
 
-## ⚙️ Types of Changes
+## Types of Changes
 
-We identify **three main cases of modifications** applied to the original WebNLG⁺ triples:
+We identify three main cases of modifications applied to the original WebNLG⁺ triples:
 
 1. **Predicate Change (Ontology Update):**
    The predicate label changes while meaning remains equivalent.
-   *Example:* `city → locationCity`
+   Example: `city → locationCity`
 
 2. **URI Change (Same Entity):**
    The subject or object URI changes to a new identifier, but the entity remains the same.
-   *Example:* `Otkrytiye_Arena → Otkritie_Arena`
+   Example: `Otkrytiye_Arena → Otkritie_Arena`
 
 3. **URI Change (Different Entity):**
    The subject or object URI changes because the underlying fact has changed.
-   *Example:*
+   Example:
    `Agremiação_Sportiva_Arapiraquense | league | Campeonato_Brasileiro_Série_C` →
    `Agremiação_Sportiva_Arapiraquense | league | Campeonato_Brasileiro_Série_D`
 
 ---
 
-## 📦 Dataset Files
+## Dataset Files
 
 Three JSON files are provided, each corresponding to a different use case (UC):
 
-| File                                         | Description                                                                                           | Change Cases Considered |
-| -------------------------------------------- | ----------------------------------------------------------------------------------------------------- | ----------------------- |
-| **`webnlg_plus_mod_ground_truth.json`**      | Contains original references and targets from WebNLG⁺ but updated ground-truth triples from WebNLG⁺ᴵ. | (i), (ii), (iii)        |
-| **`webnlg_plus_mod_pred_ground_truth.json`** | Contains original references and targets from WebNLG⁺, with only updated predicates.                  | (i)                     |
-| **`webnlg_plus_plus_ground_truth.json`**     | Contains updated references, targets, and triples — all fully aligned with WebNLG⁺ᴵ.                  | (i), (ii), (iii)        |
+| File                                     | Description                                                                                           | Change Cases Considered |
+| ---------------------------------------- | ----------------------------------------------------------------------------------------------------- | ----------------------- |
+| `webnlg_plus_mod_ground_truth.json`      | Contains original references and targets from WebNLG⁺ but updated ground-truth triples from WebNLG⁺⁺. | (i), (ii), (iii)        |
+| `webnlg_plus_mod_pred_ground_truth.json` | Contains original references and targets from WebNLG⁺, with only updated predicates.                  | (i)                     |
+| `webnlg_plus_plus_ground_truth.json`     | Contains updated references, targets, and triples — all fully aligned with WebNLG⁺⁺.                  | (i), (ii), (iii)        |
 
 ---
 
-## 🧠 Use Cases
+## Use Cases
 
-### **UC1 — Benchmark Relevance for LLMs**
+### UC1 — Benchmark Relevance for LLMs
 
 By aligning entities and predicates with the latest DBpedia version, benchmark outputs better match modern LLMs’ internal knowledge, reducing outdated references.
-
 **File:** `webnlg_plus_mod_ground_truth.json`
 
----
-
-### **UC2 — URIs and Ontology Evolution**
+### UC2 — URIs and Ontology Evolution
 
 Enables studying model robustness to unseen predicates and ontology shifts caused by DBpedia updates.
-
 **File:** `webnlg_plus_mod_pred_ground_truth.json`
 
----
-
-### **UC3 — Temporal Facts Evaluation**
+### UC3 — Temporal Facts Evaluation
 
 Supports analysis of how models handle factual updates over time, helping evaluate temporal reasoning capabilities.
-
 **File:** `webnlg_plus_plus_ground_truth.json`
 
 ---
 
-## 🔍 Examples of Changes
+## Examples of Changes
 
 ### 1. No Changes
 
@@ -103,7 +96,7 @@ Supports analysis of how models handle factual updates over time, helping evalua
 "modified": "FC_Spartak_Moscow | ground | Otkritie_Arena"
 ```
 
-### 4. URI & Predicate Modification
+### 4. URI and Predicate Modification
 
 ```
 "initial":  "Adolfo_Suárez_Madrid–Barajas_Airport | operatingOrganisation | ENAIRE",
@@ -119,7 +112,7 @@ Supports analysis of how models handle factual updates over time, helping evalua
 
 ---
 
-## 📁 Structure
+## Folder Structure
 
 ```
 webnlg_improved/
@@ -127,31 +120,31 @@ webnlg_improved/
 ├── webnlg_plus_mod_ground_truth.json
 ├── webnlg_plus_mod_pred_ground_truth.json
 ├── webnlg_plus_plus_ground_truth.json
-├── examples/
-│   ├── predicates_changes.json
-│   ├── uri_changes.json
-│   └── fact_changes.json
+├── statistics/
+│   ├── something
+│   ├── something
+│   └── something
 └── README.md
 ```
 
 ---
 
-## 📈 Potential Applications
+## Potential Applications
 
-* **Benchmarking** LLM-based triple extraction systems.
-* **Studying** ontology and URI evolution in knowledge graphs.
-* **Evaluating** temporal fact consistency and reasoning in LLMs.
+* Benchmarking LLM-based triple extraction systems.
+* Studying ontology and URI evolution in knowledge graphs.
+* Evaluating temporal fact consistency and reasoning in LLMs.
 
 ---
 
-## ⚖️ License & Citation
+## License and Citation
 
-This dataset is distributed under the **CC BY-SA 4.0 License**.
+This dataset is distributed under the ???? **CC BY-SA 4.0 License**.
 When using it, please cite:
 
 ```bibtex
 @dataset{webnlg_improved_2025,
-  title     = {WebNLG⁺ Improved: A Timely, Consistent Benchmark for LLM and Knowledge Graph Evaluation},
+  title     = {Adapting WebNLG to DBpedia Evolution with focus on LLM-based Triple Extraction},
   author    = {Your Name and Co-Authors},
   year      = {2025},
   publisher = {DBpedia / WebNLG Community},
@@ -161,14 +154,14 @@ When using it, please cite:
 
 ---
 
-## 🧩 Acknowledgments
+## Acknowledgments
 
 This dataset builds upon the **WebNLG⁺** benchmark and integrates updates from the **DBpedia** ontology and entity set.
 We thank the WebNLG organizers and DBpedia maintainers for their foundational contributions.
 
 ---
 
-## 📬 Contact
+## Contact
 
 For questions, comments, or contributions:
-📧 **[your.email@example.com](mailto:your.email@example.com)**
+**[your.email@example.com](mailto:your.email@example.com)**
