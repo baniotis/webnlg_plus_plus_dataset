@@ -120,8 +120,7 @@ webnlg_improved/
 ├── webnlg_plus_mod_ground_truth.json
 ├── webnlg_plus_mod_pred_ground_truth.json
 ├── webnlg_plus_plus_ground_truth.json
-├── statistics/
-│   ├── webnlg_plus_plus_statistics.xlsx
+├── webnlg_plus_plus_statistics.xlsx
 └── README.md
 ```
 
