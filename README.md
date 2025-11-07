@@ -112,6 +112,19 @@ Supports analysis of how models handle factual updates over time, helping evalua
 
 ---
 
+## Dataset Statistics
+
+A detailed summary of changes, entity counts, and predicate distributions is provided in  
+**`webnlg_plus_plus_statistics.xlsx`**.
+
+This file includes:
+* Number of triples affected by each change type (predicate, URI, or fact).
+* Distribution of updates across DBpedia classes.
+* Comparison between original and modified triples.
+* Summary statistics for all three ground-truth variants.
+
+---
+
 ## Folder Structure
 
 ```
