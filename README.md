@@ -98,7 +98,6 @@ Each JSON file follows the same structure:
     }
   }
 ]
-
 ---
 
 ## Examples of Changes
