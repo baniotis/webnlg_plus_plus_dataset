@@ -46,11 +46,11 @@ We identify three main cases of modifications applied to the original WebNLG⁺ 
 
 Three JSON files are provided, each corresponding to a different use case (UC):
 
-| File                                     | Description                                                                                           |// Change Cases Considered |
-| ---------------------------------------- | ----------------------------------------------------------------------------------------------------- |// ----------------------- |
-| `webnlg_plus_mod_ground_truth.json`      | Contains original references and targets from WebNLG⁺ but updated ground-truth triples from WebNLG⁺⁺. |// (i), (ii), (iii)        |
-| `webnlg_plus_mod_pred_ground_truth.json` | Contains original references and targets from WebNLG⁺, with only updated predicates.                  |// (i)                     |
-| `webnlg_plus_plus_ground_truth.json`     | Contains updated references, targets, and triples — all fully aligned with WebNLG⁺⁺.                  |// (i), (ii), (iii)        |
+| File                                     | Description                                                                                           |
+| ---------------------------------------- | ----------------------------------------------------------------------------------------------------- |
+| `webnlg_plus_mod_ground_truth.json`      | Contains original references and targets from WebNLG⁺ but updated ground-truth triples from WebNLG⁺⁺. |
+| `webnlg_plus_mod_pred_ground_truth.json` | Contains original references and targets from WebNLG⁺, with only updated predicates.                  |
+| `webnlg_plus_plus_ground_truth.json`     | Contains updated references, targets, and triples — all fully aligned with WebNLG⁺⁺.                  |
 
 ---
 
@@ -71,6 +71,29 @@ Enables studying model robustness to unseen predicates and ontology shifts cause
 Supports analysis of how models handle factual updates over time, helping evaluate temporal reasoning capabilities.
 **File:** `webnlg_plus_plus_ground_truth.json`
 
+---
+
+## E.g. Each JSON containes: 
+
+  [{
+    "row_idx": 0,
+    "row": {
+      "webnlg_id": "test/SportsTeam/1/Id1",
+      "output": [
+        "Estádio_Municipal_Coaracy_da_Mata_Fonseca | location | Arapiraca",
+        "Agremiação_Sportiva_Arapiraquense | league | Campeonato_Brasileiro_Série_D",
+        "Campeonato_Brasileiro_Série_C | country | Brazil",
+        "Agremiação_Sportiva_Arapiraquense | nickname | \"''Alvinegro\"",
+        "Agremiação_Sportiva_Arapiraquense | ground | Estádio_Municipal_Coaracy_da_Mata_Fonseca"
+      ],
+      "references": [
+        "Estádio Municipal Coaracy da Mata Fonseca is the name of the ground of Agremiação Sportiva Arapiraquense in Arapiraca. Agremiação Sportiva Arapiraquense, nicknamed \"Alvinegro\", lay in the Campeonato Brasileiro Série D league from Brazil.",
+        "Estádio Municipal Coaracy da Mata Fonseca is the name of the ground of Agremiação Sportiva Arapiraquense in Arapiraca. Alvinegro, the nickname of Agremiação Sportiva Arapiraquense, play in the Campeonato Brasileiro Série D league from Brazil."
+      ],
+      "target": "Estádio Municipal Coaracy da Mata Fonseca is the name of the ground of Agremiação Sportiva Arapiraquense in Arapiraca. Agremiação Sportiva Arapiraquense, nicknamed \"Alvinegro\", lay in the Campeonato Brasileiro Série D league from Brazil."
+    }
+  }]
+  
 ---
 
 ## Examples of Changes
