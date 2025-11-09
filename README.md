@@ -2,10 +2,17 @@
 
 ## Overview
 
-**WebNLG⁺⁺** is a harmonized, timely, and internally consistent version of the **WebNLG⁺ test set**.
-It was developed to reflect ontology and entity changes in the latest version of **DBpedia**, thereby improving alignment between benchmark data and the current world knowledge embedded in large language models (LLMs).
+**WebNLG⁺⁺** is a harmonized, timely, and internally consistent version of the **WebNLG⁺ test set**.  
+It was developed to reflect ontology and entity changes in the latest version of **DBpedia**(September 2025), thereby improving alignment between benchmark data and the current world knowledge embedded in large language models (LLMs).
 
-This dataset enables researchers to evaluate LLMs and triple extraction systems under realistic, temporally aware, and ontology-evolving conditions.
+The dataset contains **1,779 texts** and **5,639 triples**, each carefully reviewed through a **manual validation process supported by an LLM**.  
+This combination of automated assistance and human oversight ensures both scalability and accuracy in updating entity URIs and ontology predicates.
+
+To validate the usefulness of the new benchmark, **three LLMs** and **three pretrained transformer-based encoder-only models** were evaluated on the updated dataset.  
+Results show that LLMs outperform encoder-only models, even under **zero-shot prompting**, while the overall scores on the updated dataset are improved compared to the original WebNLG⁺ test set.  
+This highlights the importance of keeping benchmarks synchronized with evolving knowledge bases to ensure **fair and realistic model comparisons**.
+
+By improving the alignment between dataset content and current language modeling capabilities, **WebNLG⁺⁺** offers the research community a more **reliable and relevant benchmark** for the evaluation and comparison of LLM-based approaches in knowledge extraction and generation.
 
 ---
 
@@ -77,7 +84,7 @@ Supports analysis of how models handle factual updates over time, helping evalua
 
 Each JSON file follows the same structure:
 
-```json
+~~~json
 [
   {
     "row_idx": 0,
@@ -98,6 +105,8 @@ Each JSON file follows the same structure:
     }
   }
 ]
+~~~
+
 ---
 
 ## Examples of Changes
