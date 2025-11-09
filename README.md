@@ -46,11 +46,11 @@ We identify three main cases of modifications applied to the original WebNLG⁺ 
 
 Three JSON files are provided, each corresponding to a different use case (UC):
 
-| File                                     | Description                                                                                           | Change Cases Considered |
-| ---------------------------------------- | ----------------------------------------------------------------------------------------------------- | ----------------------- |
-| `webnlg_plus_mod_ground_truth.json`      | Contains original references and targets from WebNLG⁺ but updated ground-truth triples from WebNLG⁺⁺. | (i), (ii), (iii)        |
-| `webnlg_plus_mod_pred_ground_truth.json` | Contains original references and targets from WebNLG⁺, with only updated predicates.                  | (i)                     |
-| `webnlg_plus_plus_ground_truth.json`     | Contains updated references, targets, and triples — all fully aligned with WebNLG⁺⁺.                  | (i), (ii), (iii)        |
+| File                                     | Description                                                                                           |// Change Cases Considered |
+| ---------------------------------------- | ----------------------------------------------------------------------------------------------------- |// ----------------------- |
+| `webnlg_plus_mod_ground_truth.json`      | Contains original references and targets from WebNLG⁺ but updated ground-truth triples from WebNLG⁺⁺. |// (i), (ii), (iii)        |
+| `webnlg_plus_mod_pred_ground_truth.json` | Contains original references and targets from WebNLG⁺, with only updated predicates.                  |// (i)                     |
+| `webnlg_plus_plus_ground_truth.json`     | Contains updated references, targets, and triples — all fully aligned with WebNLG⁺⁺.                  |// (i), (ii), (iii)        |
 
 ---
 
