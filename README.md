@@ -73,9 +73,13 @@ Supports analysis of how models handle factual updates over time, helping evalua
 
 ---
 
-## E.g. Each JSON containes: 
+## JSON File Structure
 
-  [{
+Each JSON file follows the same structure:
+
+```json
+[
+  {
     "row_idx": 0,
     "row": {
       "webnlg_id": "test/SportsTeam/1/Id1",
@@ -92,7 +96,9 @@ Supports analysis of how models handle factual updates over time, helping evalua
       ],
       "target": "Estádio Municipal Coaracy da Mata Fonseca is the name of the ground of Agremiação Sportiva Arapiraquense in Arapiraca. Agremiação Sportiva Arapiraquense, nicknamed \"Alvinegro\", lay in the Campeonato Brasileiro Série D league from Brazil."
     }
-  }]
+  }
+]
+
   
 ---
 
