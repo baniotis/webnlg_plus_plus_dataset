@@ -84,6 +84,10 @@ Supports analysis of how models handle factual updates over time, helping evalua
 
 Each JSON file follows the same structure:
 
+- **`references`**: The original or updated natural-language reference texts.
+- **`target`**: The sentence from which the triples are extracted.
+- **`output`**: The list of ground-truth triples for the given entry.
+
 ~~~json
 [
   {
