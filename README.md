@@ -64,18 +64,18 @@ Three JSON files are provided, each corresponding to a different use case (UC):
 ## Use Cases
 
 ### UC1 — Benchmark Relevance for LLMs
-
-By aligning entities and predicates with the latest DBpedia version, benchmark outputs better match modern LLMs’ internal knowledge, reducing outdated references.
+Uses **original references and targets** from WebNLG⁺, but updated ground-truth triples according to all three change types (predicate, URI-same, and URI-different).  
+By aligning entities and predicates with the latest DBpedia version, benchmark outputs better match modern LLMs’ internal knowledge, reducing outdated references.  
 **File:** `webnlg_plus_mod_ground_truth.json`
 
 ### UC2 — URIs and Ontology Evolution
-
-Enables studying model robustness to unseen predicates and ontology shifts caused by DBpedia updates.
+Uses **original references and targets**; only predicate (ontology) updates are applied.  
+This enables testing model robustness to ontology-level changes while keeping entity mentions constant.  
 **File:** `webnlg_plus_mod_pred_ground_truth.json`
 
 ### UC3 — Temporal Facts Evaluation
-
-Supports analysis of how models handle factual updates over time, helping evaluate temporal reasoning capabilities.
+Uses **modified references, targets, and triples** to reflect temporal evolution in DBpedia facts (e.g., team changes leagues).  
+Supports evaluation of model adaptability to real-world factual changes over time.  
 **File:** `webnlg_plus_plus_ground_truth.json`
 
 ---
