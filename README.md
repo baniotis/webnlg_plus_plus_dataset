@@ -122,32 +122,40 @@ Each JSON file follows the same structure:
 "modified": "Estádio_Municipal_Coaracy_da_Mata_Fonseca | location | Arapiraca"
 ```
 
-### 2. Predicate Modification
+### 2. Predicate Modifications Only (Use Case 2)
 
 ```
 "initial":  "MotorSport_Vision | city | Fawkham",
 "modified": "MotorSport_Vision | locationCity | Fawkham"
 ```
 
-### 3. URI Modification (Same Entity)
+### 3. URI Modifications (Use Case 1, Use Case 2)
 
 ```
 "initial":  "FC_Spartak_Moscow | ground | Otkrytiye_Arena",
 "modified": "FC_Spartak_Moscow | ground | Otkritie_Arena"
 ```
 
-### 4. URI and Predicate Modification
+### 4. Both URI and Predicate Modifications (Use Case 1, Use Case 3)
 
 ```
 "initial":  "Adolfo_Suárez_Madrid–Barajas_Airport | operatingOrganisation | ENAIRE",
 "modified": "Adolfo_Suárez_Madrid–Barajas_Airport | operator | Aena"
 ```
 
-### 5. Fact Modification (Changed Entity)
+### 5. Fact Modifications / Subject or Object Modified
 
 ```
-"initial":  "Agremiação_Sportiva_Arapiraquense | league | Campeonato_Brasileiro_Série_C",
-"modified": "Agremiação_Sportiva_Arapiraquense | league | Campeonato_Brasileiro_Série_D"
+"Text of File 1": "Estádio Municipal Coaracy da Mata Fonseca
+is the name of the ground of Agremiação Sportiva Arapiraquense
+in Arapiraca. Agremiação Sportiva Arapiraquense, nicknamed
+\"Alvinegro\", lay in the Campeonato Brasileiro Série C league
+from Brazil."
+"Text of File 3": "Estádio Municipal Coaracy da Mata Fonseca
+is the name of the ground of Agremiação Sportiva Arapiraquense
+in Arapiraca. Agremiação Sportiva Arapiraquense, nicknamed
+\"Alvinegro\", lay in the Campeonato Brasileiro Série D league
+from Brazil."
 ```
 
 ---
