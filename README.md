@@ -195,25 +195,13 @@ webnlg_improved/
 
 ## License and Citation
 
-This dataset is distributed under the ???? **CC BY-SA 4.0 License**.
-When using it, please cite:
-
-```bibtex
-@dataset{webnlg_improved_2025,
-  title     = {Adapting WebNLG to DBpedia Evolution with focus on LLM-based Triple Extraction},
-  author    = {Your Name and Co-Authors},
-  year      = {2025},
-  publisher = {DBpedia / WebNLG Community},
-  url       = {https://github.com/yourrepo/webnlg_improved}
-}
-```
+This dataset is distributed under the **CC BY-SA 4.0 License**.
 
 ---
 
 ## Acknowledgments
 
-???This dataset builds upon the **WebNLG⁺** benchmark and integrates updates from the **DBpedia** ontology and entity set.
-We thank the WebNLG organizers and DBpedia maintainers for their foundational contributions.
+This dataset builds upon the **WebNLG⁺** benchmark and integrates updates from the **DBpedia** ontology and entity set.
 
 ---
 
