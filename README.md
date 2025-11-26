@@ -143,15 +143,15 @@ Each JSON file follows the same structure:
 "modified": "Adolfo_Suárez_Madrid–Barajas_Airport | operator | Aena"
 ```
 
-### 5. Fact Modifications / Subject or Object Modified
+### 5. Fact Modifications of Texts (UC3)
 
 ```
-"Text of File 1": "Estádio Municipal Coaracy da Mata Fonseca
+"initial": "Estádio Municipal Coaracy da Mata Fonseca
 is the name of the ground of Agremiação Sportiva Arapiraquense
 in Arapiraca. Agremiação Sportiva Arapiraquense, nicknamed
 \"Alvinegro\", lay in the Campeonato Brasileiro Série C league
 from Brazil."
-"Text of File 3": "Estádio Municipal Coaracy da Mata Fonseca
+"modified": "Estádio Municipal Coaracy da Mata Fonseca
 is the name of the ground of Agremiação Sportiva Arapiraquense
 in Arapiraca. Agremiação Sportiva Arapiraquense, nicknamed
 \"Alvinegro\", lay in the Campeonato Brasileiro Série D league
