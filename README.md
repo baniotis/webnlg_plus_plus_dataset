@@ -9,7 +9,7 @@ The dataset contains **1,779 texts** and **5,639 triples**, each carefully revie
 This combination of automated assistance and human oversight ensures both scalability and accuracy in updating entity URIs and ontology predicates.
 
 To validate the usefulness of the new benchmark, **three LLMs** and **three pretrained transformer-based encoder-only models** were evaluated on the updated dataset.  
-Results show that LLMs outperform encoder-only models, even under **zero-shot prompting**, while the overall scores on the updated dataset are improved compared to the original WebNLG⁺ test set.  
+Results show that LLMs outperform encoder-only models, even under **zero-shot prompting**, while the LLM scores on the updated dataset are improved compared to the original WebNLG⁺ test set.  
 This highlights the importance of keeping benchmarks synchronized with evolving knowledge bases to ensure **fair and realistic model comparisons**.
 
 By improving the alignment between dataset content and current language modeling capabilities, **WebNLG⁺⁺** offers the research community a more **reliable and relevant benchmark** for the evaluation and comparison of LLM-based approaches in knowledge extraction and generation.
