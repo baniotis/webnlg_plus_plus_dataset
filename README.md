@@ -199,6 +199,12 @@ This dataset is distributed under the **CC BY-SA 4.0 License**.
 
 ---
 
+## Zenodo
+
+The dataset is also publicly available on Zenodo: https://zenodo.org/records/17695689
+
+---
+
 ## Acknowledgments
 
 This dataset builds upon the **WebNLG⁺** benchmark and integrates updates from the **DBpedia** ontology and entity set.
