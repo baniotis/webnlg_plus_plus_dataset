@@ -93,7 +93,6 @@ Each JSON file follows the same structure:
   {
     "row_idx": 0,
     "row": {
-      "webnlg_id": "test/SportsTeam/1/Id1",
       "output": [
         "Estádio_Municipal_Coaracy_da_Mata_Fonseca | location | Arapiraca",
         "Agremiação_Sportiva_Arapiraquense | league | Campeonato_Brasileiro_Série_D",
