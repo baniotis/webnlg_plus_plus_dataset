@@ -210,6 +210,76 @@ This dataset builds upon the **WebNLG⁺** benchmark and integrates updates from
 
 ---
 
+## DBpedia Triple Existence Checker
+
+This repository provides a Python script for verifying the existence of RDF triples in DBpedia using SPARQL ASK queries.
+
+The checker is designed for knowledge extraction and validation pipelines, especially those producing subject–predicate–object (SPO) triples from text (e.g. WebNLG, information extraction systems, or LLM-generated outputs).
+
+---
+
+## Features
+
+- Verifies triples against the DBpedia SPARQL endpoint
+- Supports both property namespaces:
+  - `dbo:` (ontology properties)
+  - `dbp:` (raw infobox properties)
+- Handles multiple object representations:
+  - DBpedia resources
+  - Language-tagged literals (`@en`)
+  - Plain literals
+  - Typed literals:
+    - `xsd:string`
+    - `xsd:integer`
+    - `xsd:double`
+    - `xsd:gYear`
+    - `xsd:date`
+- Resolves ambiguous numeric objects (e.g. distinguishing years from integers)
+- Includes basic request throttling to avoid SPARQL endpoint overload
+- Produces a JSON report containing:
+  - Triple existence result
+  - Generated SPARQL query for each triple
+
+---
+
+## Input Format
+
+The input file must be a JSON array where each item contains an `output` field with triples formatted as: subject | predicate | object 
+
+### Input Example:
+
+```json
+[
+  {
+    "title": "WebNLG_001",
+    "output": [
+      "Albert Einstein | birthYear | 1879",
+      "Albert Einstein | birthPlace | Ulm"
+    ]
+  }
+]
+```
+
+# Output
+
+The script produces a JSON file containing, for each triple:
+
+- The original triple
+- The generated SPARQL ASK query
+- A boolean flag indicating whether the triple exists in DBpedia
+
+# Example Output:
+
+```json
+{
+  "webnlg_id": "WebNLG_001",
+  "triple": ["Albert Einstein", "birthYear", "1879"],
+  "generated_query": "ASK WHERE { ... }",
+  "exists_in_dbpedia": true
+}
+```
+---
+
 ## Contact
 
 For questions, comments, or contributions:
